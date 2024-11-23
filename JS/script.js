@@ -1,24 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next"
-const darkModeToggle = document.getElementById('darkModeToggle');
-
-
-const darkMode = localStorage.getItem('darkMode');
-
-if (darkMode === 'enabled') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    darkModeToggle.checked = true;
-}
-
-darkModeToggle.addEventListener('change', function() {
-    if (this.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('darkMode', 'enabled');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('darkMode', null);
-    }
-});
-
 function calculateBMI() {
     const weight = parseFloat(document.getElementById("weight").value);
     const height = parseFloat(document.getElementById("height").value);
