@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <body>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <div class="slider round"></div>
+            </label>
+            <em>Dark Mode</em>
+        </div>
+    </body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form id="bmiForm">
+            <!-- Weight section -->
+            <div class="input-group">
+                <input id="weight" type="number" placeholder="Enter weight" required>
+                <div class="unit-choice">
+                    <label><input type="radio" name="weightUnit" value="kg" checked> kg</label>
+                    <label><input type="radio" name="weightUnit" value="lb"> lb</label>
+                </div>
+            </div>
+
+            <!-- Height section -->
+            <div class="input-group">
+                <input id="height" type="number" placeholder="Enter height" required>
+                <div class="unit-choice">
+                    <label><input type="radio" name="heightUnit" value="m" checked> meters</label>
+                    <label><input type="radio" name="heightUnit" value="cm"> cm</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
