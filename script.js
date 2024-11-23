@@ -1,10 +1,9 @@
-// Add this at the beginning of your script file
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const darkModeToggle = document.getElementById('darkModeToggle');
 
-// Check for saved user preference, if any, on load of the website
+
 const darkMode = localStorage.getItem('darkMode');
 
-// If the user previously enabled dark mode, apply it to the document
 if (darkMode === 'enabled') {
     document.documentElement.setAttribute('data-theme', 'dark');
     darkModeToggle.checked = true;
